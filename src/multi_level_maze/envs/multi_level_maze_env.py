@@ -132,7 +132,7 @@ class MultiLevelMazeEnv(gym.Env):
             if levels > 1:
                 picked_connection = self.maze_rng.integers(size ** (levels - 1) - 1)
                 if new_p[0] != p[0]:
-                    first_p = (min(new_p[0], p[0]) * (n+1) + n, p[1]*size*(levels-1)+picked_connection)
+                    first_p = (min(new_p[0], p[0]) * (n+1) + n, p[1]*size**(levels-1)+picked_connection)
                     second_p = (first_p[0]+1, first_p[1])
                 else:
                     first_p = (p[0]*size**(levels-1)+picked_connection, min(new_p[1], p[1]) * (n+1) + n)
