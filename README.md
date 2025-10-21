@@ -23,7 +23,7 @@ Then, in your Python environment:
 import gymnasium as gym
 import multi_level_maze
 
-env = gym.make("MultiLevelMaze-v0", size=3, levels=3, seed=2, max_steps=1000, cell_size=30)
+env = gym.make("MultiLevelMaze-v0", size=3, levels=3, maze_seed=2, max_steps=1000, cell_size=30)
 obs, info = env.reset()
 
 done, truncated = False, False
