@@ -222,7 +222,6 @@ class MultiLevelMazeEnv(gym.Env):
         return np.concatenate([self_pos, goal_pos])
 
     def step(self, action):
-        """Step through environment"""
         self.steps += 1
         dx = dy = 0
         if action == 0:
