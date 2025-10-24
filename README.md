@@ -5,8 +5,6 @@ Each maze consists of multiple levels of structure, where every sub-block is int
 
 ![Screenshot](./maze.png?raw=true "Screenshot")
 
----
-
 ## Getting Started
 
 ### Installation
@@ -35,8 +33,6 @@ while not (done or truncated):
 env.close()
 ```
 
----
-
 ## Environment Parameters
 
 You can customize the environment using the following arguments when creating it with `gym.make("MultiLevelMaze-v0", ...)`.
@@ -50,16 +46,12 @@ You can customize the environment using the following arguments when creating it
 | `maze_seed`  | int  | 1       | Seed controlling the maze structure. Fixed per environment.                |
 | `render_fps` | int  | 5       | Frames per second when rendering with Pygame.                              |
 
----
-
 ### Reproducibility
 
 * The **maze structure** is fixed by `maze_seed` and reused across resets.
 * The **starting position and goal** are randomized each time you call `reset(seed=...)`.
 * Using the same `seed` reproduces the same starting and goal positions.
 * To generate a completely new maze, reinstantiate the environment with a different `maze_seed`.
-
----
 
 ## Observations and Actions
 
@@ -76,13 +68,9 @@ Discrete with 4 actions:
 | 2      | Move left  |
 | 3      | Move right |
 
----
-
 ## Citation
 
 If you use this environment in your research, please cite it using the `CITATION.cff` file included in this repository.
-
----
 
 ## License
 
@@ -100,9 +88,3 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program;
 if not, see https://www.gnu.org/licenses.
 ```
-
----
-
-## TODO
-
-* [ ] **Vectorization**
